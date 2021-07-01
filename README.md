@@ -1,5 +1,6 @@
-# cli-examples
-A selection of CLI example code in Python
+# Command Line Interface Examples in Python
+
+A selection of CLI example code in Python that demonstrate different ways a program can get input from the user directly from the command line. 
 
 - cli/example0 uses [`sys.argv`][argv]
 - cli/example1 uses [`argparse.ArgumentParser`][argparse]
@@ -9,14 +10,15 @@ After the package is installed, three command line tools will be available; `cli
 
 ## Install
 
-## Usage
+This project is managed by `poetry` but can be installed locally using the following (I suggest installing into a virtual environment to minimize any side-effects on your existing Python installation). 
 
-### cli0
-
-### cli1
-
-### cli2
-
+```
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ python3 -m pip install git+https://github.com/JnyJny/cli-examples
+...
+```
+This only installs the example commands and not the source code for the project. See the **Develop** section for more information.
 
 ## Develop
 

@@ -87,8 +87,8 @@ doc = ["mkdocs (>=1.1.2,<2.0.0)", "mkdocs-material (>=5.4.0,<6.0.0)", "markdown-
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "defa5c2d21b17dde2bae7c4e4e381dd6dc52666f8aac25cd035f9e2c543368eb"
+python-versions = "^3.8"
+content-hash = "ed2337a18d323034671b6d5e0f5618433949f9e72e16ca4ba8ca7044469da29b"
 
 [metadata.files]
 appdirs = [

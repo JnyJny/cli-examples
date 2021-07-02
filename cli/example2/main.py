@@ -1,4 +1,4 @@
-"""
+""" a CLI built on Typer
 """
 
 import typer

@@ -3,16 +3,20 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core>=1.0.0"]
 
 [tool]
+
 [tool.poetry]
 authors = ["JnyJny <erik.oshaughnessy@gmail.com>"]
 description = "A selection of CLI examples"
 name = "cli"
 version = "0.1.0"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 typer = "^0.3.2"
+
 [tool.poetry.dev-dependencies]
 black = "^21.6b0"
+
 [tool.poetry.scripts]
 cli0 = "cli.example0.main:main"
 cli1 = "cli.example1.main:main"

@@ -22,7 +22,7 @@ This only installs the example commands and not the source code for the project.
 
 ## Develop
 
-The dependencies and packaging for this code is managed by the excellent tool [`poetry`][poetry] and I highly recommend learning how to use it. `Poetry` is much easier to use and manage than older techniques, such as `setup.py` and `setup.conf`. There are other modern packaging tools like `flit`, however I really like using `poetry`. 
+The dependencies and packaging for this code is managed by the excellent tool [`poetry`][poetry] and I highly recommend learning how to use it. `Poetry` is much easier to use and manage than older techniques, such as `setup.py` / `setup.conf`. There are other modern packaging tools like `flit`, however I really like using `poetry`. 
 
 ```
 $ python3 -m pip install poetry

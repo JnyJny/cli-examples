@@ -16,7 +16,7 @@
 1. `$ source .venv/bin/activate`
 1. `$ python3 -m pip install -r requirements.txt`
 
---
+---
 
 ## Introduction to `sys.argv`
 The contents of `cli/00-dump-argv/__main__.py`:
@@ -39,7 +39,7 @@ $ python3 -m cli foo -bar ack -v
 
 ['/Users/ejo/local/cli-examples/cli/__main__.py', 'foo', '-bar', 'baz', '-v']
 ```
---
+---
 
 ## Implementation of `cp` parsing `sys.argv`
 
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     outputfile.write(inputfile.read())
 ```
 
---
+---
 
 ## Implementation of `cp` using `argparse`
 
@@ -107,7 +107,7 @@ if __name__ == "__main__":
     args.output_file.write(args.input_file.read())
 ```
 
---
+---
 
 
 ## Implementation of `cp` using `typer`
@@ -141,7 +141,7 @@ if __name__ == "__main__":
 
 ```
 
---
+---
 
 
 ## Implementation of `cp` using `click`
@@ -149,7 +149,7 @@ if __name__ == "__main__":
 ```python
 ```
 
---
+---
 
 
 

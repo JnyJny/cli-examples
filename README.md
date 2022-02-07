@@ -35,9 +35,13 @@ if __name__ == "__main__":
 ```
 
 ```console
-$ python3 -m cli foo -bar ack -v
-
-['/Users/ejo/local/cli-examples/cli/__main__.py', 'foo', '-bar', 'baz', '-v']
+$ python3 -m cli.00-dump-argv foo -b baz -a --ack
+argv[0] == /Users/ejo/local/cli-examples/cli/00-dump-argv/__main__.py
+argv[1] == foo
+argv[2] == -b
+argv[3] == baz
+argv[4] == -a
+argv[5] == --ack
 ```
 ---
 

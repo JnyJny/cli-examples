@@ -1,24 +1,30 @@
 
-LIST= rich -ng -w 80 -a heavy -F
+LIST= rich -ng -w 88 -a heavy -F
 
 
-SRC= cli/example0/__main__.py \
-     cli/example1/__main__.py \
-     cli/example2/__main__.py
+MODULES= cli/00-dump-argv/ cli/10-argv cli/20-argparse cli/30-typer
 
-LISTINGS= example0.rich example1.rich example2.rich
+MAINS= ${MODULES:=/__main__.py}
+
+LISTINGS= 00-main.rich 10-main.rich 20-main.rich 30-main.rich
 
 all: $(LISTINGS)
 
-example0.rich: cli/example0/__main__.py
+00-main.rich: cli/00-dump-argv/__main__.py
 	$(LIST) $< > $@
 
-example1.rich: cli/example1/__main__.py
+
+10-main.rich: cli/10-argv/__main__.py
 	$(LIST) $< > $@
 
-example2.rich: cli/example2/__main__.py
+
+20-main.rich: cli/20-argparse/__main__.py
 	$(LIST) $< > $@
 
-#.py.rich: 
-#	$(LIST) $< > $@
 
+30-main.rich: cli/30-typer/__main__.py
+	$(LIST) $< > $@
+
+
+clean:
+	/bin/rm -f *.rich

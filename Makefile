@@ -1,5 +1,5 @@
 
-LIST= rich -ng -w 88 -a heavy -F
+LIST= rich -n -w 88 -F
 
 
 MODULES= cli/00-dump-argv/ cli/10-argv cli/20-argparse cli/30-typer

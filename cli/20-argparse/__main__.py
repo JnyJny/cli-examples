@@ -1,6 +1,4 @@
 """ copy file implemented with argparse
-
-usage: cp1 [-i input] [-o output] [-f]
 """
 
 

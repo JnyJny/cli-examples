@@ -1,6 +1,4 @@
 """ copy file implemented with sys.argv
-
-usage:  cp0 [-i input] [-o output] [-f]
 """
 
 import sys

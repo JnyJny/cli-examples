@@ -1,14 +1,14 @@
 """ copy file implemented with typer
-
-usage: cp2 [-i input] [-o output] [-f]
 """
 
 import typer
 
 cli = typer.Typer()
 
+context_settings = dict(help_option_names=["--help", "-h"])
 
-@cli.command()
+
+@cli.command(context_settings=context_settings)
 def concatenate_files(
     input_file: typer.FileText = typer.Option("-"),
     output_file: typer.FileTextWrite = typer.Option("-"),

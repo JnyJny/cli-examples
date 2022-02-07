@@ -1,58 +1,46 @@
-# Command Line Interface Examples in Python
+# cli-examples
+A selection of CLI example code in Python
 
-A selection of CLI example code in Python that demonstrate different ways a program can get input from the user directly from the command line. 
 
-- cli/example0 uses [`sys.argv`][argv]
-- cli/example1 uses [`argparse.ArgumentParser`][argparse]
-- cli/example2 uses [`typer`][typer]
+## Installation
 
-After the package is installed, three command line tools will be available; `cli0`, `cli1` and `cli2`. 
+### Clone The Repo
+1. `$ git clone https://github.com/JnyJny/cli-examples`
+1. `$ cd cli-examples`
 
-## Install
+### Install with Poetry
 
-This project is managed by `poetry` but can be installed locally using the following (I suggest installing into a virtual environment to minimize any side-effects on your existing Python installation). 
+1. `$ poetry shell`
+1. `$ poetry install`
 
-```
-$ python3 -m venv .venv
-$ source .venv/bin/activate
-$ python3 -m pip install git+https://github.com/JnyJny/cli-examples
-...
-```
-This only installs the example commands and not the source code for the project. See the **Develop** section for more information.
 
-## Develop
+### Install with Pip
+1. `$ python3 -m venv .venv`
+1. `$ source .venv/bin/activate`
+1. `$ python3 -m pip install -r requirements.txt`
 
-The dependencies and packaging for this code is managed by the excellent tool [`poetry`][poetry] and I highly recommend learning how to use it. `Poetry` is much easier to use and manage than older techniques, such as `setup.py` / `setup.conf`. There are other modern packaging tools like `flit`, however I really like using `poetry`. 
 
-```
-$ python3 -m pip install poetry
-```
+## Introduction to sys.argv
 
-After installing `poetry`, clone the repo:
 
-```
-$ git clone https://github.com/JnyJny/cli-examples
-$ cd cli-examples
-```
-
-Next, start a `poetry` shell which will create and manage a virtual environment for you.
-
-```
-$ poetry shell
-...
+```python
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    1 """ introduction to sys.argv                                            ┃
+┃    2                                                                         ┃
+┃    3 Prints the contents of sys.argv and exits with status 11                ┃
+┃    4 """                                                                     ┃
+┃    5                                                                         ┃
+┃    6 import sys                                                              ┃
+┃    7                                                                         ┃
+┃    8 if __name__ == "__main__":                                              ┃
+┃    9 │   print(sys.argv)                                                     ┃
+┃   10 │   exit(11)                                                            ┃
+┃   11                                                                         ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-The first time after you've created a new virtual environment (typically after starting the shell the first time), you'll need to install the package and dependencies.
+Run this command with:
 
 ```
-$ poetry install
-...
-```
-
-Once this is complete, the three `cli` commands will become available and any edits you make to the source code will be "live" for those commands.
 
 
-[argv]: https://docs.python.org/3/library/sys.html?highlight=argv#sys.argv
-[argparse]: https://docs.python.org/3/library/argparse.html
-[typer]: https://typer.tiangolo.com
-[poetry]: https://python-poetry.org/docs/

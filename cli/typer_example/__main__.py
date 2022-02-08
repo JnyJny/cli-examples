@@ -5,10 +5,8 @@ import typer
 
 cli = typer.Typer()
 
-context_settings = dict(help_option_names=["--help", "-h"])
 
-
-@cli.command(context_settings=context_settings)
+@cli.command(context_settings=dict(help_option_names=["--help", "-h"]))
 def concatenate_files(
     input_file: typer.FileText = typer.Option("-"),
     output_file: typer.FileTextWrite = typer.Option("-"),

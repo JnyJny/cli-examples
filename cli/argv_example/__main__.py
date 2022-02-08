@@ -3,13 +3,12 @@
 
 import sys
 
-if __name__ == "__main__":
-    # default values
+
+def main() -> None:
     inputfile = sys.stdin
     outputfile = sys.stdout
     flag = False
 
-    # sys.argv[0] is the name of the program
     for ndx, item in enumerate(sys.argv[1:]):
         if item in ["-i", "--input-file"]:
             inputfile = open(sys.argv[ndx + 1], "r")
@@ -32,3 +31,7 @@ if __name__ == "__main__":
     print("flag", flag)
 
     outputfile.write(inputfile.read())
+
+
+if __name__ == "__main__":
+    main()

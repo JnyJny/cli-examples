@@ -5,9 +5,11 @@ description = "A selection of CLI examples"
 authors = ["JnyJny <erik.oshaughnessy@gmail.com>"]
 
 [tool.poetry.scripts]
-cli0 = "cli.example0.main:main"
-cli1 = "cli.example1.main:main"
-cli2 = "cli.example2.main:cli"
+dump = "cli.dump_argv.__main__:main"
+cli0 = "cli.argv_example.__main__:main"
+cli1 = "cli.argparse_example.__main__:main"
+cli2 = "cli.typer_example.__main__:cli"
+
 
 [tool.poetry.dependencies]
 python = "^3.9"

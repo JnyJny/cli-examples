@@ -9,8 +9,8 @@ import click
 @click.option("output-file", type=click.File("w"))
 def copy_files(input_file, output_file, flag):
     """Copy input file to the named output file."""
-    print("flag", flag)
 
+    print("flag", flag)
     output_file.write(input_file.read())
 
 

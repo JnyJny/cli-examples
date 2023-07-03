@@ -2,7 +2,7 @@
 """
 
 
-from argparse import ArgumentParser, FileType
+from argparse import ArgumentParser, FileType, Namespace
 
 
 def main() -> None:
@@ -10,7 +10,9 @@ def main() -> None:
     parser.add_argument("--input-file", "-i", type=FileType("r"), default="-")
     parser.add_argument("--output-file", "-o", type=FileType("w"), default="-")
     parser.add_argument("--flag", "-f", action="store_true")
-    args = parser.parse_args()
+    parser.add_argument("--foo", default="foo")
+
+    args: Namespace = parser.parse_args()
 
     print("flag", args.flag)
 

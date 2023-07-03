@@ -7,7 +7,7 @@ cli = typer.Typer()
 
 
 @cli.command(context_settings=dict(help_option_names=["--help", "-h"]))
-def concatenate_files(
+def copy_files(
     input_file: typer.FileText = typer.Option("-"),
     output_file: typer.FileTextWrite = typer.Option("-"),
     flag: bool = False,
